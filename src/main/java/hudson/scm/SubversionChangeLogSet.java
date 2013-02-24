@@ -312,7 +312,6 @@ public final class SubversionChangeLogSet extends ChangeLogSet<LogEntry> {
         
         void finish() {
             Collections.sort(paths, new Comparator<Path>() {
-                @Override
                 public int compare(Path o1, Path o2) {
                     String path1 = Util.fixNull(o1.getValue());
                     String path2 = Util.fixNull(o2.getValue());

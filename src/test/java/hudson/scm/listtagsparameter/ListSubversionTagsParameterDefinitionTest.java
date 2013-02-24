@@ -54,7 +54,6 @@ public class ListSubversionTagsParameterDefinitionTest extends AbstractSubversio
         SVNURL repoURL = SVNURL.parseURIEncoded( "svn://localhost/");
         SVNLogClient logClient = new SVNLogClient((ISVNAuthenticationManager)null, null);
         logClient.doList(repoURL, SVNRevision.HEAD, SVNRevision.HEAD, false, true, new ISVNDirEntryHandler() {
-            @Override
             public void handleDirEntry(SVNDirEntry dirEntry) throws SVNException {
                 System.out.println(dirEntry.getRelativePath());
             }
